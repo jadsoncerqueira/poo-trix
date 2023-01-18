@@ -10,4 +10,9 @@ routes.post(
   (req, res, next) => new TransferController(req, res, next).create(),
 );
 
+routes.get(
+  '/transfer',
+  (req, res, next) => new TransferController(req, res, next).findTransfers(),
+);
+
 export default routes;

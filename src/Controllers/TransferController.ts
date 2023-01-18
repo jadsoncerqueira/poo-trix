@@ -30,6 +30,11 @@ class TransferController {
       this.next(error);
     }
   }
+
+  public async findTransfers() {
+    const transfers = await this.service.findTransfers();
+    return this.res.status(200).json(transfers);
+  }
 }
   
 export default TransferController;
