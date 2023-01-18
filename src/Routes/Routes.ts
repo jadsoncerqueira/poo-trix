@@ -15,4 +15,9 @@ routes.get(
   (req, res, next) => new TransferController(req, res, next).findTransfers(),
 );
 
+routes.get(
+  '/key/:key',
+  (req, res, next) => new TransferController(req, res, next).findTransfer(),
+);
+
 export default routes;

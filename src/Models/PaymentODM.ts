@@ -30,6 +30,10 @@ class PaymentODM {
   public async find(): Promise<IPayment[]> {
     return this.model.find();
   }
+
+  public async findOne(key: string) {
+    return this.model.find({ key });
+  }
 }
 
 export default PaymentODM;

@@ -35,6 +35,11 @@ class TransferController {
     const transfers = await this.service.findTransfers();
     return this.res.status(200).json(transfers);
   }
+
+  public async findTransfer() {
+    const transfers = await this.service.findTransfer(this.req.params.key);
+    return this.res.status(200).json(transfers);
+  }
 }
   
 export default TransferController;
